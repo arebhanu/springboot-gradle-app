@@ -25,6 +25,7 @@ public class HelloRestController {
 	public void setHelloRepository(HelloRepository helloRepository) {
 		this.helloRepository = helloRepository;
 	}
+	
 	@RequestMapping(method = RequestMethod.GET)
 	public Collection<Hello> hellos(){
 		return helloRepository.findAllByOrderByIdDesc();
